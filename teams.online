@@ -1,0 +1,8 @@
+# Load the Microsoft Teams module
+Import-Module MicrosoftTeams
+
+# Set the status as "Available" and keep it that way
+while ($true) {
+    Set-CsUserPresence -Identity <UserPrincipalName> -Availability "Available"
+    Start-Sleep -Seconds 3600
+}
