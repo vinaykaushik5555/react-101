@@ -6,3 +6,14 @@ while ($true) {
     Set-CsUserPresence -Identity <UserPrincipalName> -Availability "Available"
     Start-Sleep -Seconds 3600
 }
+
+import java.awt.Robot;
+import java.awt.Point;
+
+public class MoveMouseCursor {
+    public static void main(String[] args) throws Exception {
+        Robot robot = new Robot();
+        Point point = new Point(1000, 500);
+        robot.mouseMove(point.x, point.y);
+    }
+}
