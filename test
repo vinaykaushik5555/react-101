@@ -1,0 +1,19 @@
+
+Subject: Issue with Multiple Email Support in ABS UI Registration
+
+Dear ,
+
+I wanted to bring to your attention an issue we have encountered with the BTS UI registration process that supports multiple emails in the email field using various separators such as commas, semicolons, and spaces.
+
+While this feature allows users to conveniently input multiple email addresses, it has led to some complications when sending questionnaires and comments reports to the compliance team. The compliance team requires only one sender email address for these reports, but due to the presence of multiple separators and occasionally emails starting with "mailto:", the intended recipient does not receive the reports correctly.
+
+I kindly request your assistance in looking into this matter and finding a suitable solution. It would greatly benefit our workflow and ensure that the compliance team receives accurate and complete reports.
+
+If possible, could you please assign a developer to investigate this issue and propose an appropriate fix? It would be ideal to modify the BTS UI registration process to handle multiple emails uniformly, removing any unwanted characters or prefixes that may cause complications downstream.
+
+I understand that you and your team have multiple ongoing tasks, but resolving this issue will significantly improve our reporting process and streamline our compliance efforts. Your support in addressing this matter is highly appreciated.
+
+Please let me know if you require any additional information or if there is anything else I can assist you with regarding this issue. I look forward to your prompt attention and a positive resolution.
+
+Thank you for your understanding and cooperation.
+
