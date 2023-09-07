@@ -1,19 +1,26 @@
-# Load the Microsoft Teams module
-Import-Module MicrosoftTeams
+ObjectMapper objectMapper = new ObjectMapper();
+            JsonNode rootNode = objectMapper.readTree(json);
 
-# Set the status as "Available" and keep it that way
-while ($true) {
-    Set-CsUserPresence -Identity <UserPrincipalName> -Availability "Available"
-    Start-Sleep -Seconds 3600
-}
+            for (JsonNode node : rootNode) {
+                JsonNode productRules = node.get("productRules");
+                if (productRules != null && productRules.isObject()) {
+                    for (JsonNode keyNode : productRules) {
+                        if (keyNode.isArray()) {
+                            for (JsonNode valueNode : keyNode) {
+                                String productCode = valueNode.asText();
+                                if ("A".equals(productCode) || "B".equals(productCode)) {
+                                    guids.add(node.get("guid").asText());
+                                    break; // Break from inner loop, no need to check other values
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
-import java.awt.Robot;
-import java.awt.Point;
-
-public class MoveMouseCursor {
-    public static void main(String[] args) throws Exception {
-        Robot robot = new Robot();
-        Point point = new Point(1000, 500);
-        robot.mouseMove(point.x, point.y);
+        return guids;
     }
 }
